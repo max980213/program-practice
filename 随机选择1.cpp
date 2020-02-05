@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>     //包含round()函数
-#include <iostream>   //包含swap()函数
+#include <iostream>   //包含swap()函数   //algorithm同
 
 using namespace std;  //不可省
 
@@ -25,7 +25,7 @@ int randPartition(int A[],int left,int right)  //随机选择主元
         while(left<right&&A[right]>temp)
             right--;
         A[left]=A[right];
-        while(left<right&&A[right]<=temp)  //选一个小于等于，保证与主元相等的元素在同一侧
+        while(left<right&&A[left]<=temp)  //选一个小于等于，保证与主元相等的元素在同一侧
             left++;
         A[right]=A[left];
     }
